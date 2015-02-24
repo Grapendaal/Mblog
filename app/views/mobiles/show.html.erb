@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @mobile.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @mobile.description %>
+</p>
+
+<p>
+  <strong>Release:</strong>
+  <%= @mobile.release %>
+</p>
+
+<p>
+  <strong>Recommended:</strong>
+  <%= @mobile.Recommended %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@mobile.picture_url, :width => 600) if @mobile.picture.present? %>
+  <h3>Comments</h3>
+<% @comments.each do |comment| %>
+  <div>
+    <strong><%= comment.user_name %></strong>
+    <br />
+    <p><%= comment.body %></p>
+    <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  </div>
+<% end %>
+<%= render 'comments/form' %>
+</p>
+
+<%= link_to 'Edit', edit_mobile_path(@mobile) %> |
+<%= link_to 'Back', mobiles_path %>
