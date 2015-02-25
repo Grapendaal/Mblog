@@ -7,6 +7,7 @@ gem 'rails', '4.2.0'
 gem 'pg'
 
 gem 'carrierwave'
+gem 'mini_magick', '3.8.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -46,4 +47,4 @@ group :development, :test do
 end
 
 gem 'rails_12factor', group: :production
-ruby "2.2.0"
+ruby "2.1.5"
