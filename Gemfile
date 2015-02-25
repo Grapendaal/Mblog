@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
-gem 'rails_12factor'
+
 gem 'carrierwave'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -44,3 +44,6 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+gem 'rails_12factor', group: :production
+ruby "2.2.0"
